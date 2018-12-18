@@ -1,10 +1,10 @@
 package com.charkun704;
 
 public class Burger {
-    private String burgerType;
-    private String protein;
-    private String bunType;
-    private double totalPrice;
+    protected String burgerType;
+    protected String protein;
+    protected String bunType;
+    protected double totalPrice;
 
     private String topping01;
     private double toppingPrice01;
@@ -32,24 +32,26 @@ public class Burger {
         this.totalPrice = totalPrice;
     }
 
-    private void calculatePrice(){
-        totalPrice = toppingPrice01 + toppingPrice02 + toppingPrice03 + toppingPrice04;
-    }
 
-    private void addTopping01(String topping01,double toppingPrice01){
+    public void addTopping01(String topping01,double toppingPrice01){
         this.topping01 = topping01;
         this.toppingPrice01 = toppingPrice01;
     }
-    private void addTopping02(String topping02,double toppingPrice02){
+    public void addTopping02(String topping02,double toppingPrice02){
         this.topping02 = topping02;
         this.toppingPrice02 = toppingPrice02;
     }
-    private void addTopping03(String topping03,double toppingPrice03){
+    public void addTopping03(String topping03,double toppingPrice03){
         this.topping03 = topping03;
         this.toppingPrice03 = toppingPrice03;
     }
-    private void addTopping04(String topping04,double toppingPrice04){
+    public void addTopping04(String topping04,double toppingPrice04){
         this.topping04 = topping04;
         this.toppingPrice04 = toppingPrice04;
+    }
+
+    public void showOrder(){
+        totalPrice = totalPrice + toppingPrice01 + toppingPrice02 + toppingPrice03 + toppingPrice04;
+        System.out.println(" Your "+burgerType+" burger cost $"+totalPrice+"\n");
     }
 }
