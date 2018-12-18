@@ -22,5 +22,7 @@ public class Veggie extends Burger {
     @Override
     public void showOrder() {
         totalPrice = totalPrice + toppingPrice05 + toppingPrice06;
-        System.out.println(" Your "+burgerType+" burger cost $"+totalPrice+"\n");    }
+        System.out.println(" Your "+burgerType+" burger cost $"+totalPrice+" with "+topping05+" and "+
+                topping06+".\n");
+    }
 }

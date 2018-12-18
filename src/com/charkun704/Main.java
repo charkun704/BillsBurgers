@@ -14,5 +14,8 @@ public class Main {
         order02.addTopping05("ketchup",.25);
         order02.addTopping06("relish",.25);
         order02.showOrder();
+
+        Deluxe order03 = new Deluxe();
+        order03.showOrder();
     }
 }

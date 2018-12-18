@@ -52,6 +52,7 @@ public class Burger {
 
     public void showOrder(){
         totalPrice = totalPrice + toppingPrice01 + toppingPrice02 + toppingPrice03 + toppingPrice04;
-        System.out.println(" Your "+burgerType+" burger cost $"+totalPrice+"\n");
+        System.out.println(" Your "+burgerType+" burger cost $"+totalPrice+" with "+topping01+", "+
+                topping02+", "+topping03+", and "+topping04+".\n");
     }
 }
